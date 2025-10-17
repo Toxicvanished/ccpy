@@ -1434,12 +1434,13 @@ located within `openblas/lib`, or something similar.
 ## CCpy Development Team
 
 Dr. Karthik Gururangan\
-Computational Scientist, DecisionNext
+Computational Scientist, DecisionNext\
 e-mail: kgururangan@gmail.com\
 (lead developer)
 
 Dr. J. Emiliano Deustua\
 COO and Co-founder, Examol\
+e-mail: edeustua@gmail.com\
 (co-developer)
 
 Professor Piotr Piecuch\
