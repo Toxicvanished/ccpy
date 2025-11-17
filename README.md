@@ -15,7 +15,7 @@ CCpy provides easy-to-use interfaces to both PySCF and GAMESS for obtaining the 
 one- and two-electron integrals in the molecular orbital basis that are used to set up the correlated CC calculations. A general interface that can be used to 
 initialize CCpy calculations using reference state information and one- and two-electron integrals provided by an FCIDUMP file is also included. 
 
-CCpy is distributed as an official extension module of PySCF (see https://pyscf.org/install.html#extension-modules).
+CCpy is distributed as an official extension module of PySCF (see [https://pyscf.org/install.html#extension-modules](https://pyscf.org/user/extensions.html)).
 </p>
 
 ## Available Computational Options
