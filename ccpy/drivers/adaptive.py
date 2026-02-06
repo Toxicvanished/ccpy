@@ -8,9 +8,10 @@ from ccpy.constants.constants import hartreetoeV
 
 class AdaptDriver:
 
-    def __init__(self, driver, percentage=None):
+    def __init__(self, driver, percentage=None, acparray=None):
         self.driver = driver
         self.percentage = percentage
+        self.acparray = acparray
         self.options = {"two_body_approx": True,
                         "reset_amplitudes": False,
                         "energy_tolerance": 1.0e-04,
@@ -101,7 +102,11 @@ class AdaptDriver:
 
     def run_ccp(self, imacro):
         """Runs iterative CC(P), and if needed, HBar and iterative left-CC calculations."""
-        self.driver.run_ccp(method="ccsdt_p", t3_excitations=self.t3_excitations)
+        if self.acparray:
+            self.driver.run_ccp(method="accsdt_p", t3_excitations=self.t3_excitations, acparray=self.acparray)
+        else:
+            self.driver.run_ccp(method="ccsdt_p", t3_excitations=self.t3_excitations)
+
         if self.options["two_body_approx"]:
             self.driver.run_hbar(method="ccsd")
             self.driver.run_leftcc(method="left_ccsd")
